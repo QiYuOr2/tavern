@@ -7,6 +7,7 @@ const examples = [
   { href: '04-word-float-up', label: '文字上浮动画' },
   { href: '05-three-column', label: '三栏布局' },
   { href: '06-two-column', label: '两栏布局' },
+  { href: '06-skeleton-loader', label: '骨架屏加载' },
 ];
 
 /**

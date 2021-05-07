@@ -61,3 +61,22 @@ main ul li a:hover {
   box-shadow: 0 0 19px 1px rgb(0 0 0 / 15%);
   transition: all 0.3s;
 }
+
+@media (max-width: 767px) {
+  header {
+    padding: 2rem;
+  }
+  main ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 554px) {
+  main ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}

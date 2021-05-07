@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 320px;
+  box-shadow: 0 0 5px 1px rgb(0 0 0 / 10%);
+  border-radius: 6px;
+  --loading-color: #ededed;
+}
+.card .image {
+  height: 200px;
+}
+
+.loading .image {
+  background-color: var(--loading-color);
+}
+
+.loading .content {
+  padding: 1rem;
+}
+
+.loading .content [class$='line'] {
+  width: 100%;
+  background-color: var(--loading-color);
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+.loading .image,
+.loading .content [class$='line'] {
+  background: linear-gradient(
+      100deg,
+      transparent 40%,
+      rgba(255, 255, 255, 0.5) 50%,
+      transparent 60%
+    );
+  background-color: var(--loading-color);
+  background-size: 200% 100%;
+  background-position-x: 180%;
+  animation: 1.2s loading ease-in-out infinite;
+}
+.loading .content [class$='line']:last-child {
+  margin-bottom: 0;
+}
+.loading .content .oneline {
+  height: 2rem;
+}
+.loading .content .twoline {
+  height: 4rem;
+}
+.loading .content .threeline {
+  height: 6rem;
+}
+
+@keyframes loading {
+  to {
+    background-position-x: -20%;
+  }
+}
