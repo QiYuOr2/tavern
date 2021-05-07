@@ -3,6 +3,7 @@ const app = document.getElementById('app');
 const examples = [
   { href: '01-swiper', label: '图片轮播组件' },
   { href: '02-profile-card', label: '个人资料卡片' },
+  { href: '03-login-glass', label: '毛玻璃登陆页' },
 ];
 
 /**

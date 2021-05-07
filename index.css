@@ -50,6 +50,7 @@ main ul {
   gap: 1rem;
 }
 main ul li a {
+  text-align: center;
   display: block;
   padding: 1rem 2rem;
   border-radius: 5px;
