@@ -9,3 +9,7 @@ HTML 和 CSS 示例合集
 - [毛玻璃登陆页](https://xmy6364.github.io/html-css-example/03-login-glass/)
 
 - [文字上浮动画](https://xmy6364.github.io/html-css-example/04-word-float-up/)
+
+- [三栏布局](https://xmy6364.github.io/html-css-example/05-three-column/)
+
+- [两栏布局](https://xmy6364.github.io/html-css-example/06-two-column/)

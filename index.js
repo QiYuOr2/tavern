@@ -5,6 +5,8 @@ const examples = [
   { href: '02-profile-card', label: '个人资料卡片' },
   { href: '03-login-glass', label: '毛玻璃登陆页' },
   { href: '04-word-float-up', label: '文字上浮动画' },
+  { href: '05-three-column', label: '三栏布局' },
+  { href: '06-two-column', label: '两栏布局' },
 ];
 
 /**
