@@ -2,10 +2,8 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTML和CSS示例</title>
-    <link rel="stylesheet" href="./index.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>文字上浮动画</title>
     <style>
       .github-corner:hover .octo-arm {
         animation: octocat-wave 560ms ease-in-out;
@@ -33,10 +31,11 @@
         }
       }
     </style>
+    <link rel="stylesheet" href="./index.css">
   </head>
   <body>
     <a
-      href="https://github.com/xmy6364/html-css-example"
+      href="https://github.com/xmy6364/html-css-example/tree/main/04-word-float-up"
       class="github-corner"
       aria-label="View source on GitHub"
     >
@@ -68,22 +67,19 @@
         ></path>
       </svg>
     </a>
-    <header>
-      <h1>HTML和CSS示例</h1>
-      <section>
-        <p>
-          以下为完全原生的HTML、CSS和JavaScript的案例合集，部分代码可能不兼容低版本浏览器
-        </p>
-        <p>
-          项目源码可以在
-          <a href="https://github.com/xmy6364/html-css-example">
-            https://github.com/xmy6364/html-css-example
-          </a>
-          中获取
-        </p>
-      </section>
-    </header>
-    <main id="app"></main>
-    <script src="./index.js"></script>
+
+    <div id="container">
+      <h1>
+        <span><i>蜀</i></span>
+        <span><i>道</i></span>
+        <span><i>难</i></span>
+        <span><i>-</i></span>
+        <span><i>李</i></span>
+        <span><i>白</i></span>
+      </h1>
+      <p>
+        噫吁嚱，危乎高哉，蜀道之难，难于上青天！蚕丛及鱼凫，开国何茫然。尔来四万八千岁，不与秦塞通人烟。西当太白有鸟道，可以横绝峨眉巅。地崩山摧壮士死，然后天梯石栈相钩连。上有六龙回日之高标，下有冲波逆折之回川。
+      </p>
+    </div>
   </body>
 </html>
