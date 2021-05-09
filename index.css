@@ -20,6 +20,7 @@ a {
 
 body {
   padding-top: 2rem;
+  padding-bottom: 2rem;
 
   display: flex;
   flex-direction: column;
@@ -87,7 +88,7 @@ main ul li a:hover {
 
 @media (max-width: 767px) {
   header {
-    padding: 2rem;
+    padding: 0 2rem;
   }
   main ul {
     display: grid;
