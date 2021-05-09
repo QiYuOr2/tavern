@@ -9,3 +9,4 @@ HTML 和 CSS 示例合集
 - [三栏布局](https://xmy6364.github.io/html-css-example/05-three-column/)
 - [两栏布局](https://xmy6364.github.io/html-css-example/06-two-column/)
 - [骨架屏加载](https://xmy6364.github.io/html-css-example/07-skeleton-loader/)
+- [打字机效果](https://xmy6364.github.io/html-css-example/08-typing-effect/)

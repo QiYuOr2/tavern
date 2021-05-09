@@ -8,6 +8,7 @@ const examples = [
   { href: '05-three-column', label: '三栏布局' },
   { href: '06-two-column', label: '两栏布局' },
   { href: '07-skeleton-loader', label: '骨架屏加载' },
+  { href: '08-typing-effect', label: '打字机效果' },
 ];
 
 /**
