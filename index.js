@@ -10,6 +10,7 @@ const examples = [
   { href: '07-skeleton-loader', label: '骨架屏加载' },
   { href: '08-typing-effect', label: '打字机效果' },
   { href: '09-svg-chart', label: 'SVG折线图' },
+  { href: '10-fullpage', label: '全屏滚动' },
 ];
 
 /**
@@ -18,7 +19,10 @@ const examples = [
  */
 function generateList(links) {
   return links.map(
-    (link) => `<li><a href="${link.href}">${link.label}</a></li>`
+    (link, i) =>
+      `<li><a href="${link.href}" style="--delay: ${i * 0.1}s">${
+        link.label
+      }</a></li>`
   );
 }
 
