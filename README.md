@@ -10,3 +10,4 @@ HTML 和 CSS 示例合集
 - [两栏布局](https://xmy6364.github.io/html-css-example/06-two-column/)
 - [骨架屏加载](https://xmy6364.github.io/html-css-example/07-skeleton-loader/)
 - [打字机效果](https://xmy6364.github.io/html-css-example/08-typing-effect/)
+- [SVG折线图]](https://xmy6364.github.io/html-css-example/09-svg-chart/)
