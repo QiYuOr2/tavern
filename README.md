@@ -12,3 +12,5 @@ HTML 和 CSS 示例合集
 - [打字机效果](https://xmy6364.github.io/html-css-example/08-typing-effect/)
 - [SVG折线图](https://xmy6364.github.io/html-css-example/09-svg-chart/)
 - [全屏滚动](https://xmy6364.github.io/html-css-example/10-fullpage/)
+- [虚拟列表](https://xmy6364.github.io/html-css-example/11-virtual-list/)
+- [无限列表](https://xmy6364.github.io/html-css-example/12-infinite-list/)

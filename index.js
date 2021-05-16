@@ -11,7 +11,8 @@ const examples = [
   { href: '08-typing-effect', label: '打字机效果' },
   { href: '09-svg-chart', label: 'SVG折线图' },
   { href: '10-fullpage', label: '全屏滚动' },
-  { href: '11-virtual-list', label: '虚拟（无限）列表' },
+  { href: '11-virtual-list', label: '虚拟列表' },
+  { href: '12-infinite-list', label: '无限列表' },
 ];
 
 /**
