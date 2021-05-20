@@ -13,6 +13,7 @@ const examples = [
   { href: '10-fullpage', label: '全屏滚动' },
   { href: '11-virtual-list', label: '虚拟列表' },
   { href: '12-infinite-list', label: '无限列表' },
+  { href: '13-generate-json', label: '表格生成JSON' },
 ];
 
 /**
