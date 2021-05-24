@@ -14,6 +14,7 @@ const examples = [
   { href: '11-virtual-list', label: '虚拟列表' },
   { href: '12-infinite-list', label: '无限列表' },
   { href: '13-generate-json', label: '表格生成JSON' },
+  { href: '14-two-million', label: '《两 百 万》' },
 ];
 
 /**
