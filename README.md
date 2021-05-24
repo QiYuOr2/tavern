@@ -16,3 +16,4 @@ HTML 和 CSS 示例合集
 - [无限列表](https://xmy6364.github.io/html-css-example/12-infinite-list/)
 - [通过表格生成 JSON](https://xmy6364.github.io/html-css-example/13-generate-json/)
 - [200 万](https://xmy6364.github.io/html-css-example/14-two-million)
+- [SVG 心](https://xmy6364.github.io/html-css-example/15-svg-heart)
