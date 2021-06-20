@@ -16,6 +16,7 @@ const examples = [
   { href: '13-generate-json', label: '表格生成JSON' },
   { href: '14-two-million', label: '《两 百 万》' },
   { href: '15-svg-heart', label: 'SVG心' },
+  { href: '16-canvas-image', label: 'Canvas存为图片' },
 ];
 
 /**
