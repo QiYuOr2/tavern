@@ -1,3 +1,16 @@
+<script setup lang="ts">
+import { computed } from "vue";
+
+const { name, href } = defineProps({
+  name: String,
+  href: { type: String, default: "https://github.com/qiyuor2/tavern" },
+});
+
+const link = computed(() => {
+  return name ? `https://github.com/qiyuor2/tavern/tree/main/src/pages/demos/${name}.vue` : href;
+});
+</script>
+
 <template>
   <a :href="link" class="github-corner" aria-label="View source on GitHub">
     <svg
@@ -22,19 +35,6 @@
     </svg>
   </a>
 </template>
-
-<script setup lang="ts">
-import { computed } from "vue";
-
-const { name, href } = defineProps({
-  name: String,
-  href: { type: String, default: "https://github.com/qiyuor2/tavern" },
-});
-
-const link = computed(() => {
-  return name ? `https://github.com/qiyuor2/tavern/tree/main/${name}` : href;
-});
-</script>
 
 <style lang="less">
 .github-corner:hover .octo-arm {
