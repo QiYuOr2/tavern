@@ -1,11 +1,7 @@
 <script setup lang="ts">
 import Layout from "@/layouts/DemoLayout.vue";
-</script>
 
-<script lang="ts">
-import { defineComponent } from "vue";
-
-export default defineComponent({
+defineOptions({
   label: "个人资料卡片",
   name: "profile-card",
 });

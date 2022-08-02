@@ -1,17 +1,14 @@
 <script setup lang="ts">
 import PageLayout from "@/layouts/PageLayout.vue";
+
+defineOptions({
+  name: "index",
+});
+
 const demoFiles = import.meta.globEager("./demos/*.vue");
 const demos = Object.keys(demoFiles).map((k) => {
   const { label, name } = demoFiles[k].default;
   return { label, name };
-});
-</script>
-
-<script lang="ts">
-import { defineComponent } from "vue";
-
-export default defineComponent({
-  name: "index",
 });
 </script>
 
