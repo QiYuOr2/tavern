@@ -1,5 +1,10 @@
 <script setup lang="ts">
+import { useHead } from "@vueuse/head";
 import Layout from "@/layouts/DemoLayout.vue";
+
+useHead({
+  title: "个人资料卡片 | @柒宇",
+});
 
 defineOptions({
   label: "个人资料卡片",

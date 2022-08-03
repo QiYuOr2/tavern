@@ -8,5 +8,14 @@ defineProps({
 
 <template>
   <GithubCorner :name="name" />
-  <slot></slot>
+  <div class="page-layout">
+    <slot></slot>
+  </div>
 </template>
+
+<style scoped lang="less">
+.page-layout {
+  height: 100%;
+  padding: 0 16rem;
+}
+</style>

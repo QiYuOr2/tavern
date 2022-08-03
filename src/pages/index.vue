@@ -15,7 +15,7 @@ const demos = Object.keys(demoFiles).map((k) => {
 <template>
   <PageLayout>
     <header>
-      <h1>一些前端案例</h1>
+      <h1>一些前端动画/样式案例</h1>
     </header>
     <main>
       <ul>

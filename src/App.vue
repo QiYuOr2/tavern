@@ -16,7 +16,10 @@ body {
   display: flex;
   justify-content: center;
 }
-
+#app {
+  width: 100%;
+  height: 100%;
+}
 li {
   list-style: none;
 }
