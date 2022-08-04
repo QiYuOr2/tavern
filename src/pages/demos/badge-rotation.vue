@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 import { useHead } from "@vueuse/head";
 import Layout from "@/layouts/DemoLayout.vue";
 import { DefaultNull } from "@/utils/type";
@@ -7,17 +7,21 @@ import useRotationAnime from "@/hooks/useRotationAnime";
 
 //#region
 useHead({
-  title: `旋转徽章 | @柒宇`,
+  title: `旋转吧！徽章！ | @柒宇`,
 });
 
 defineOptions({
-  label: "旋转徽章",
+  label: "旋转吧！徽章！",
   name: "badge-rotation",
 });
 //#endregion
 
 const container = ref<DefaultNull<HTMLDivElement>>(null);
-const { rotateYWithDeg } = useRotationAnime(container);
+const { rotateYWithDeg, run } = useRotationAnime(container);
+
+onMounted(() => {
+  run(30);
+});
 </script>
 
 <template>

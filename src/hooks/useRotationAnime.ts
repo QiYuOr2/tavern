@@ -1,5 +1,11 @@
+import { inRange } from "@/utils";
 import { MaybeComputedRef, usePointerSwipe } from "@vueuse/core";
 import { ref, computed, reactive } from "vue";
+
+/**
+ * 可忽略的速度
+ */
+const CanIgnoreSpeed = 0.0005;
 
 export default function useRotationAnime(el: MaybeComputedRef<HTMLElement | null | undefined>) {
   /**
@@ -15,20 +21,32 @@ export default function useRotationAnime(el: MaybeComputedRef<HTMLElement | null
     end: 0,
   });
 
-  const anime = () => {
+  const speed = ref(0);
 
-  }
-  
-  const step = (timestamp: number) => {
-    const speed = distanceX.value / (touchTime.end - touchTime.start);
+  const run = (rotate?: number) => {
+    rotate && (rotateY.value = rotate);
+    const step = (_timestamp: number) => {
+      const diffRotate = rotateY.value % 180;
+      const positiveDiffRotate = diffRotate < 0 ? diffRotate + 180 : diffRotate;
+
+      // 回正速度，相当于徽章在一个水平面上会由于重力逐渐回到正面或反面
+      if (inRange("[)", [90, 180], positiveDiffRotate)) {
+        speed.value -= 0.008;
+      } else if (inRange("[)", [0, 90], positiveDiffRotate)) {
+        speed.value += 0.008;
+      }
+
+      // 减速
+      speed.value *= 0.92;
+
+      rotateY.value -= speed.value * 10;
+
+      if (Math.abs(speed.value) > CanIgnoreSpeed) {
+        requestAnimationFrame(step);
+      }
+    };
 
     requestAnimationFrame(step);
-  };
-
-  const calculateRotate = (speed: number) => {
-    requestAnimationFrame(() => {
-      rotateY.value = rotateY.value - speed * 10;
-    });
   };
 
   const { distanceX } = usePointerSwipe(el, {
@@ -43,12 +61,14 @@ export default function useRotationAnime(el: MaybeComputedRef<HTMLElement | null
     onSwipeEnd() {
       // 松手自动回正 or 根据拖动速度计算角度
       touchTime.end = Date.now();
+      speed.value = distanceX.value / (touchTime.end - touchTime.start);
 
-      requestAnimationFrame(step);
+      run();
     },
   });
 
   return {
     rotateYWithDeg,
+    run,
   };
 }
