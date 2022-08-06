@@ -40,6 +40,8 @@ figure {
   box-shadow: 0 0 12px 1px rgb(0 0 0 / 20%);
   border-radius: 12px;
   overflow: hidden;
+
+  transition: all 0.3s;
   img {
     height: 240px;
     width: 160px;
@@ -47,11 +49,13 @@ figure {
 
     grid-row-start: 1;
     grid-row-end: 3;
+    transition: all 0.3s;
   }
 
   blockquote,
   figcaption {
     padding: 1.5rem 1.5rem 0;
+    transition: all 0.3s;
   }
   figcaption {
     padding-top: 0;
