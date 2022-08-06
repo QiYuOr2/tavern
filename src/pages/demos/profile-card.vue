@@ -68,4 +68,42 @@ figure {
     }
   }
 }
+
+@media (max-width: 820px) {
+  figure {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: border-box;
+    width: 280px;
+    height: auto;
+    padding: 1rem;
+
+    img {
+      display: inline-block;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+
+      width: 50px;
+      height: 50px;
+      border-radius: 30px;
+    }
+    blockquote,
+    figcaption {
+      padding: 0;
+    }
+    blockquote {
+      order: 2;
+      padding-top: 1.3rem;
+    }
+    figcaption {
+      display: inline-block;
+      order: 1;
+      padding-left: 68px;
+    }
+  }
+}
 </style>
