@@ -13,6 +13,5 @@
       "@/*": ["./src/*"]
     },
     "types": ["unplugin-vue-macros"]
-  },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+  }
 }

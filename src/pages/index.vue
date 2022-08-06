@@ -80,7 +80,7 @@ main {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   header {
     padding: 0 2rem;
   }
@@ -94,7 +94,7 @@ main {
 @media (max-width: 554px) {
   main ul {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
   }
 }

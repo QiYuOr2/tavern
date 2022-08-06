@@ -18,4 +18,22 @@ defineProps({
   height: 100%;
   padding: 0 16rem;
 }
+@media (max-width: 1200px) {
+  .page-layout {
+    height: 100%;
+    padding: 0 10rem;
+  }
+}
+@media (max-width: 1080px) {
+  .page-layout {
+    height: 100%;
+    padding: 0 5rem;
+  }
+}
+@media (max-width: 820px) {
+  .page-layout {
+    height: 100%;
+    padding: 0 2rem;
+  }
+}
 </style>
