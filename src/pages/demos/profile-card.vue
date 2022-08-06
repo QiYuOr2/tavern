@@ -15,7 +15,7 @@ defineOptions({
 <template>
   <Layout name="profile-card">
     <figure>
-      <img src="https://cdn.jsdelivr.net/gh/xmy6364/blog-image/img/pixelartoc_1.png" alt="avatar" />
+      <img src="https://avatars.githubusercontent.com/u/48339849?v=4" alt="avatar" />
       <blockquote>
         <p>
           噫吁嚱，危乎高哉，蜀道之难，难于上青天！蚕丛及鱼凫，开国何茫然。尔来四万八千岁，不与秦塞通人烟。西当太白有鸟道，可以横绝峨眉巅。地崩山摧壮士死，然后天梯石栈相钩连。上有六龙回日之高标，下有冲波逆折之回川。
