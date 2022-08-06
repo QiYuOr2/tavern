@@ -15,6 +15,7 @@ body {
 
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 #app {
   width: 100%;

@@ -31,6 +31,7 @@ onMounted(() => {
         <div class="badge__front"></div>
         <div class="badge__back"></div>
       </div>
+      <div class="desc">← 尝试左右滑动 →</div>
     </div>
   </Layout>
 </template>
@@ -40,13 +41,21 @@ onMounted(() => {
 @space: 5px;
 
 .container {
+  position: fixed;
+  top: 0;
+  left: 0;
+
   width: 100%;
   height: 100%;
 
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   overflow: hidden;
+  .desc {
+    margin-top: 1rem;
+  }
 }
 
 .badge {
