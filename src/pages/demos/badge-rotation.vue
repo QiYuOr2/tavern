@@ -20,6 +20,7 @@ const container = ref<DefaultNull<HTMLDivElement>>(null);
 const { rotateYWithDeg, run } = useRotationAnime(container);
 
 onMounted(() => {
+  // 首次进入稍微晃一下
   run(30);
 });
 </script>
