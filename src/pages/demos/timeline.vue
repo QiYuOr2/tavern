@@ -5,11 +5,11 @@ import useTimelineAnime from "@/hooks/useTimelineAnime";
 import { ref } from "vue";
 
 useHead({
-  title: "时间轴动画TODO | @柒宇",
+  title: "时间轴动画 | @柒宇",
 });
 
 defineOptions({
-  label: "时间轴动画TODO",
+  label: "时间轴动画",
   name: "timeline",
 });
 
