@@ -53,23 +53,6 @@ export default function useTimelineAnime(el: MaybeComputedRef<HTMLElement | null
   };
 
   /**
-   * 含有位置信息的节点
-   */
-  const timelineNodes = computed(() => {
-    level.value = -1;
-    direction.value = "l";
-    return list.reduce<TimelineNodeWithPosition[]>((result, current, i) => {
-      if (i % 3 === 0) {
-        level.value += 1;
-        direction.value = direction.value === "l" ? "r" : "l";
-      }
-      current.delay = `${i * (delay || 0)}ms`;
-      result.push(point(current, i % maxCountInLine));
-      return result;
-    }, []);
-  });
-
-  /**
    * 拐点时的延长线目标节点
    */
   const getNextPoint = (current: any) => ({ x: current.x, y: current.y - distance.y });
@@ -83,11 +66,22 @@ export default function useTimelineAnime(el: MaybeComputedRef<HTMLElement | null
   const semicirclePath = (x: number, y: number) =>
     direction.value === "r" ? `A ${r} ${r} 0 1 1 ${x} ${y} ` : `A ${-r} ${-r} 0 1 0 ${x} ${y} `;
 
-  const pathD = computed(() => {
+  const nodesAndLine = computed(() => {
     level.value = -1;
     direction.value = "l";
+    const timelineNodes = list.reduce<TimelineNodeWithPosition[]>((result, current, i) => {
+      if (i % 3 === 0) {
+        level.value += 1;
+        direction.value = direction.value === "l" ? "r" : "l";
+      }
+      current.delay = `${i * (delay || 0)}ms`;
+      result.push(point(current, i % maxCountInLine));
+      return result;
+    }, []);
 
-    return timelineNodes.value.reduce((result, current, i) => {
+    level.value = -1;
+    direction.value = "l";
+    const pathD = timelineNodes.reduce((result, current, i) => {
       if (i % 3 === 0 && i !== 0) {
         // 拐点延长
         result += line(getNextPoint(current));
@@ -102,7 +96,13 @@ export default function useTimelineAnime(el: MaybeComputedRef<HTMLElement | null
       result = result + line(current);
       return result;
     }, "M ");
+
+    return { timelineNodes, pathD };
   });
 
-  return { timelineNodes, pathD, lineLength };
+  return {
+    timelineNodes: computed(() => nodesAndLine.value.timelineNodes),
+    pathD: computed(() => nodesAndLine.value.pathD),
+    lineLength,
+  };
 }
