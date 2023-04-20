@@ -15,12 +15,16 @@ defineOptions({
 
 const container = ref<HTMLElement>();
 const { play } = useLike(container);
+
+const click = (e: MouseEvent) => {
+  play(e.clientX - 50, e.clientY - 50)
+}
 </script>
 
 <template>
   <DemoLayout name="like">
     <div ref="container"></div>
-    <button @click="play">点击</button>
+    <button @click="click">点击</button>
   </DemoLayout>
 </template>
 
