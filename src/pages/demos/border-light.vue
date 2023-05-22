@@ -29,23 +29,13 @@ defineOptions({
   margin: 20px;
   padding: 2rem;
 
-  // border: 4px solid #654eff;
   border-radius: 20px;
 
-  &::before {
-    content: '';
-    position: absolute;
-    z-index: -2;
-    left: -10%;
-    top: -10%;
-    width: 120%;
-    height: 120%;
-    background: linear-gradient(240deg, transparent 40%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 52%, transparent 60%);
-    background-color: #654eff;
-    background-size: 200% 100%;
-    background-position-x: 180%;
-    animation: 3.2s loading ease-in-out infinite;
-  }
+  background: linear-gradient(240deg, transparent 40%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 52%, transparent 60%);
+  background-color: #654eff;
+  background-size: 200% 100%;
+  background-position-x: 180%;
+  animation: 3s loading ease-in-out infinite;
 
   &::after {
     content: '';
