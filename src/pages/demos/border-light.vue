@@ -26,16 +26,25 @@ defineOptions({
 
   width: 400px;
   height: 500px;
-  margin: 20px;
-  padding: 2rem;
 
   border-radius: 20px;
 
-  background: linear-gradient(240deg, transparent 40%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 52%, transparent 60%);
-  background-color: #654eff;
-  background-size: 200% 100%;
-  background-position-x: 180%;
-  animation: 3s loading ease-in-out infinite;
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -2;
+
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+
+    background: linear-gradient(240deg, transparent 40%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 52%, transparent 60%);
+    background-color: #654eff;
+    background-size: 200% 100%;
+    background-position-x: 180%;
+    animation: 3s loading ease-in-out infinite;
+  }
 
   &::after {
     content: '';
